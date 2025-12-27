@@ -278,7 +278,7 @@ table td {
     /* Accueil Mobile */
     .hero h1 {
         position: relative;
-        font-size: 2.5rem;
+        font-size: 2rem;
         display: flex;
         flex-direction: column;
     }
@@ -294,7 +294,7 @@ table td {
     }
 
     .hero img {
-        width: 170px;
+        width: 150px;
     }
 
     .year {
