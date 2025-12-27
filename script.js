@@ -1,30 +1,19 @@
-// =====================================================================
-// script.js - Fichier JS partagé
-// =====================================================================
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links li a');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinksList = document.querySelectorAll('.nav-links a');
+// Toggle Menu Hamburger
+menu.addEventListener('click', function() {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+});
 
-    // Toggle du menu au clic sur le burger
-    burgerMenu.addEventListener('click', () => {
-        toggleMenu();
+// Fermer le menu lors du clic sur un lien (pour mobile < 768px)
+navItems.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+            menu.classList.remove('is-active');
+            menuLinks.classList.remove('active');
+        }
     });
-
-    // Fermeture automatique du menu au clic sur un lien (sur mobile)
-    navLinksList.forEach(link => {
-        link.addEventListener('click', () => {
-            // Vérifie si le menu est ouvert et si l'écran est petit (via la classe active)
-            if (navLinks.classList.contains('active') && window.innerWidth <= 768) {
-                toggleMenu();
-            }
-        });
-    });
-
-    function toggleMenu() {
-        navLinks.classList.toggle('active');
-        burgerMenu.classList.toggle('active');
-        // Optionnel: Gérer l'accessibilité ou le focus ici
-    }
 });

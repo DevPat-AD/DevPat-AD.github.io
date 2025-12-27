@@ -1,67 +1,57 @@
-<!-- ... (Header et structure de base identiques) ... -->
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscriptions - Masters de Morens 2026</title>
+    <title>Masters de Morens 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <div class="site-container">
-        <header class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./assets/img/logo_navbar.png" alt="Logo Masters de Morens">
-                </a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/img/logo_navbar.png" alt="Logo Masters de Morens">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <nav class="nav-links">
-                <a href="index.html">Accueil</a>
-                <a href="reglements.html">Règlements</a>
-                <a href="inscriptions.html">Inscriptions</a>
-                <a href="recompenses.html">Récompenses</a>
-                <a href="cantine.html">Cantine</a>
-            </nav>
-            <div class="burger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </header>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="reglements.html">Règlements</a></li>
+                <li><a href="inscriptions.html">Inscriptions</a></li>
+                <li><a href="recompenses.html">Récompenses</a></li>
+                <li><a href="cantine.html">Cantine</a></li>
+                <li><a href="resultats.html">Résultats</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <main>
-            <section class="content-section page-content">
-                <h2>Inscriptions</h2>
+    <main>
+        <!-- LE CONTENU SPECIFIQUE A CHAQUE PAGE VA ICI -->
+        <h2>Inscriptions</h2>
+        <p>Les inscriptions sont ouvertes. Les 8 premières équipes validées (paiement reçu) participent.</p>
+        <p><strong>Frais :</strong> 140.00 CHF par équipe.</p>
+        <p>Envoyez par mail (Noms, Nom d'équipe, Email, Tél) à : <a href="mailto:peasyness@bluewin.ch"
+                target="_blank">peasyness@bluewin.ch</a></p>
+        <h3>Coordonnées pour le paiement</h3>
+        <ul>
+            <li><strong>TWINT :</strong> 077 539.18.40</li>
+            <li><strong>CASH</strong></li>
+        </ul>
 
-                <p>Les inscriptions sont ouvertes. Les 8 premières équipes qui s'inscrivent et payent les frais
-                    d'inscription seront validées.</p>
+    </main>
 
-                <p><strong>Frais d'inscription pour le Masters de Morens : 140.00 CHF par équipe.</strong></p>
+    <footer>
+        <p>&copy; 2026 Masters de Morens. Tous droits réservés.</p>
+    </footer>
 
-                <p>Pour inscrire votre équipe, envoyez les informations suivantes à l'adresse mail ci-dessous :</p>
-                <ul>
-                    <li>Nom et prénom des joueurs</li>
-                    <li>Nom de l'équipe</li>
-                    <li>Adresse email</li>
-                    <li>Numéro de téléphone</li>
-                </ul>
-                <p>Envoyez les informations à : <a href="mailto:peasyness@bluewin.ch" target="_blank"
-                        style="color: var(--color-secondary); text-decoration: underline;">peasyness@bluewin.ch</a></p>
-
-                <h3>Coordonnées pour le payement</h3>
-                <ol>
-                    <li>TWINT : [Mes coordonnées TWINT]</li>
-                    <li>PostFinance : [Mes coordonnées PostFinance]</li>
-                </ol>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <p>©2026 Masters de Morens. Tous droits réservés.</p>
-        </footer>
-    </div>
     <script src="script.js"></script>
 </body>
 
