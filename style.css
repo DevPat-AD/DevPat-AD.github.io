@@ -278,7 +278,7 @@ table td {
     /* Accueil Mobile */
     .hero h1 {
         position: relative;
-        font-size: 2rem;
+        font-size: 1.5rem;
         display: flex;
         flex-direction: column;
     }
@@ -294,16 +294,16 @@ table td {
     }
 
     .hero img {
-        width: 150px;
+        width: 100px;
     }
 
     .year {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .ready {
 
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
 
     @keyframes growLine {
