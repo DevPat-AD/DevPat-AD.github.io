@@ -5,55 +5,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masters de Morens 2026</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Le grand rendez-vous de la pétanque en doublette montée, huit équipes s'affronteront pour la gloire...">
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="./assets/img/logo_navbar.png" alt="Logo Masters de Morens">
-            </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./assets/img/logo_navbar.webp" alt="Logo Masters de Morens">
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#index">Accueil</a></li>
+                    <li><a href="#reglements">Règlements</a></li>
+                    <li><a href="#inscriptions">Inscriptions</a></li>
+                    <li><a href="#recompenses">Récompenses</a></li>
+                    <li><a href="#cantine">Cantine</a></li>
+                    <li><a href="#resultats">Résultats</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="reglements.html">Règlements</a></li>
-                <li><a href="inscriptions.html">Inscriptions</a></li>
-                <li><a href="recompenses.html">Récompenses</a></li>
-                <li><a href="cantine.html">Cantine</a></li>
-                <li><a href="resultats.html">Résultats</a></li>
-            </ul>
+        </nav>
+
+        <div class="header-text" id="index">
+            <div>
+                <img src="./assets/img/master.webp" alt="Logo du Masters">
+                <h1>MASTERS de MORENS</h1>
+                <h2>2026</h2>
+                <p>Le grand rendez-vous de la doublette montée</p>
+                <p>8 équipes s'affronteront pour la gloire</p>
+                <h3>ARE YOU READY</h3>
+            </div>
         </div>
-    </nav>
-
-    <main>
+    </header>
+    <section class="reglements" id="reglements">
         <!-- LE CONTENU SPECIFIQUE A CHAQUE PAGE VA ICI -->
-        <section class="hero">
-            <img src="./assets/img/master.png" alt="Masters Logo">
-            <h1><span>MASTERS</span> <span>de</span> <span>MORENS</span></h1>
-            <div class="line-container">
-                <div class="line"></div>
-                <div class="year">2026</div>
-                <div class="line"></div>
+        <h2>Règlement du tournoi</h2>
+        <h3>Format de Compétition</h3>
+        <p>Le tournoi se déroule en deux phases :</p>
+        <h4>Phase de Round Robin :</h4>
+        <ul>
+            <li>Les 8 équipes jouent les unes contre les autres (28 matches).
+                Les 4 meilleures se qualifient.</li>
+
+        </ul>
+        <h4>Phase finale :</h4>
+        <ul>
+            <li>Élimination directe avec Quarts de finale, Demi-finale et Finale (6 matches).</li>
+        </ul>
+
+
+        <h3>Règles du jeu</h3>
+        <p>Le tournoi suit les règles officielles : <a
+                href="https://www.acfp.ch/files/acfp/documents/2021/Reglement-international_2021_F.pdf"
+                target="_blank">ACFP règlements</a></p>
+
+        <h3>Spécificités du Masters de Morens :</h3>
+        <ul>
+            <li>Le Masters de Morens se déroule dans la joie et la bonne humeur, respect et fair-play.</li>
+            <li>Seules les personnes de 18 ans et plus sont autorisées à s'inscrire au Masters de Morens.</li>
+            <li>Le Masters de Morens est ouvert aux personnes non licenciées, à l'exception d'Audrey.</li>
+            <li>Les dimensions du terrain de Morens sont les suivantes : 13m x 3m. Le terrain est délimité par des
+                bordures en inox.</li>
+            <li>Une boule est considérée comme sortie si elle est à moins de 50cm du fond du terrain.</li>
+            <li>Les parties se jouent en 13 points.</li>
+            <li>Le remplacement d'un joueur est interdit.</li>
+            <li>Lorsque les équipes seront connues, une communauté WhatsApp sera créée pour gérer les dates des matches.
+            </li>
+            <li>La phase Round Robin prend fin le 31 septembre 2026.</li>
+            <li>La phase finale prend fin le 31 novembre 2026.</li>
+            <li>Les rencontres non disputées au terme de la période sont comptabilisées comme nulles.</li>
+            <li>Tout désistement après programmation du match entraîne une défaite par forfait.</li>
+        </ul>
+    </section>
+    <section class="inscriptions" id="inscriptions">
+        <h2>Inscriptions</h2>
+        <p>Les inscriptions sont ouvertes. Les 8 premières équipes validées (paiement reçu) participent.</p>
+        <p><strong>Frais :</strong> 140.00 CHF par équipe.</p>
+        <h3>Envoyez par email les infos ci-dessous</h3>
+        <ul>
+            <li>Noms</li>
+            <li>Nom de l'équipe</li>
+            <li>Email</li>
+            <li>Tél.</li>
+        </ul>
+        <p>A : <a href="mailto:peasyness@bluewin.ch" target="_blank">peasyness@bluewin.ch</a></p>
+        <h3>Coordonnées pour le paiement</h3>
+        <ul>
+            <li><strong>TWINT :</strong> 077 539.18.40</li>
+            <li><strong>CASH</strong></li>
+        </ul>
+    </section>
+    <section class="recompenses" id="recompenses">
+        <div style="text-align: center;">
+            <h2>Récompenses</h2>
+            <p>De superbes récompenses attendent les meilleures équipes !</p>
+            <img src="./assets/img/recompenses.webp" alt="Récompenses" id="img-recompenses">
+            <p>Les récompenses sont payées par TWINT ou CASH.</p>
+        </div>
+    </section>
+    <section class="cantine" id="cantine">
+        <div class="grid-2">
+            <div>
+                <h2>Cantine</h2>
+                <h3>Boissons<i class="fas fa-champagne-glasses" style="padding-left: 15px;"></i></h3>
+
+                <h4>Rouge :</h4>
+                <ul>
+                    <li>Châteauneuf-du-Pape : L'Oratoire des Papes : 34.-</li>
+                    <li>Saint-Emilion : Château Fombrauge : 27.-</li>
+                    <li>Garanoir : La réserve du Prieur : 19.-</li>
+                </ul>
+                <h4>Blanc :</h4>
+                <ul>
+                    <li>Auvernier : Goutte d'Or (chasselas) : 15.-</li>
+                </ul>
+                <h4>Rosé :</h4>
+                <ul>
+                    <li>Languedoc-Roussillon : Cote des Roses : 12.-</li>
+                </ul>
+
+                <h3>Menus<i class="fas fa-utensils" style="padding-left: 15px;"></i></h3>
+                <ul>
+                    <li>Fondue fromage : 15.-</li>
+                    <li>Raclette : 20.-</li>
+                    <li>Fondue bourguignonne : 28.-</li>
+                </ul>
             </div>
-            <p>Le grand rendez-vous de la doublette montée / 8 équipes s'affronteront pour la gloire</p>
-            <p class="ready">ARE YOU READY</p>
-        </section>
-
-    </main>
-
+            <img src="./assets/img/cantine.webp" alt="Cantine" id="img-cantine">
+        </div>
+    </section>
+    <section class="resultats" id="resultats">
+        <h2 style="text-align:center;">Classement</h2>
+        <div class="grid-3">
+            <div>
+                <h3>Round Robin</h3>
+                <table>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Équipe</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Equipe One</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Equipe Two</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Equipe Three</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Equipe Four</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Equipe Five</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Equipe Six</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Equipe Seven</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Equipe Eight</td>
+                    </tr>
+                    <!-- Continuez pour les 8 équipes -->
+                </table>
+            </div>
+            <div>
+                <h3>Phase finale</h3>
+                <table>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Équipe</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Equipe One</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Equipe Two</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Equipe Three</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Equipe Four</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2026 Masters de Morens. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

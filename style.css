@@ -1,59 +1,86 @@
+@font-face {
+    font-family: "Poppins";
+    font-display: auto;
+    src: url(./assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-display: auto;
+    src: url(./assets/fonts/Roboto-Light.ttf);
+}
+
 :root {
-    --primary-color: #1a2a6c;
-    /* Bleu profond */
-    --secondary-color: #b21f1f;
-    /* Rouge passion */
-    --accent-color: #fdbb2d;
-    /* Or pétanque */
-    --text-color: #333;
-    --bg-color: #f4f4f4;
-    --white: #f2f2f2;
-    --shadow: 0 10px 20px rgba(6, 6, 6, 0.15);
+    --font1: 'Allura', cursive;
+    --font2: 'Poppins', serif;
+    --font3: 'Roboto', serif;
+    --white: #eee;
+    --black: #21201e;
+    --grey: rgb(182, 182, 182);
+    --color1: #ECBE4D;
+    --color2: #2A74A3;
+    --color3: #3755a6;
+    --color4: #0B0E17;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+li {
+    list-style: none;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    text-align: center;
+    font-family: var(--font3);
+    background: var(--white);
 }
 
-main {
-    min-height: calc(100vh -80px - 58px);
+
+header {
+    background: url(./assets/img/back-header1.webp) center/cover;
+    color: var(--white);
 }
 
 /* Navbar */
-.navbar {
-    height: 80px;
-    background: var(--primary-color);
+#navbar {
+    height: 70px;
     display: flex;
     align-items: center;
     position: fixed;
+    transition: top 0.3s;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0px 1px 12px 0px var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Cette classe sera ajoutée via JavaScript */
+.nav-hidden {
+    top: -8vh !important;
+    /* On la remonte de sa propre hauteur */
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .logo img {
-    height: 60px;
+    height: 40px;
     display: block;
-    border-radius: 0;
 }
 
 .nav-links {
@@ -65,13 +92,12 @@ main {
 .nav-links li a {
     text-decoration: none;
     color: var(--white);
-    font-weight: 600;
     margin-left: 25px;
     transition: 0.3s;
 }
 
 .nav-links li a:hover {
-    color: var(--secondary-color);
+    color: var(--color1);
 }
 
 /* Hamburger Menu */
@@ -89,130 +115,218 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
-/* Espacements Titres */
-h1,
-h2,
-h3,
-h4 {
-    margin-bottom: 20px;
-    color: var(--primary-color);
+/****** Accueil ******/
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-p,
-ul {
-    margin-bottom: 15px;
+.header-text div {
+    margin-top: 20px;
 }
 
-img {
-    box-shadow: var(--shadow);
-    border-radius: 8px;
+/* master.png */
+.header-text img {
+    margin: 50px 0 0;
+    height: 300px;
     max-width: 100%;
+    filter: drop-shadow(3px 1px 2px #ECBE4D);
 }
 
-/* Footer */
-footer {
-    height: 58px;
-    background: var(--primary-color);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9rem;
-}
-
-/* PAGE ACCUEIL (Hero Section) */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero img {
-    width: 400px;
-    margin: 20px 0;
-    box-shadow: none;
-    filter: drop-shadow(0 0 0 rgb(29, 28, 28));
-    /* Pas d'ombre sur l'image master si souhaité */
-}
-
-.hero h1 {
+/* Masters de Morens */
+.header-text h1 {
     position: relative;
-    font-size: 3.5rem;
+    user-select: none;
+    letter-spacing: 5px;
+    font-size: 3rem;
+    margin: 50px 0 20px;
+    color: var(--color1);
+    text-shadow: 2px 2px 8px var(--grey);
+}
+
+/* 2026 */
+.header-text h2 {
+    user-select: none;
+    margin: 0 0 30px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: var(--color1);
+    text-shadow: 2px 2px 8px var(--grey);
+}
+
+.header-text p {
+    user-select: none;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgb(107, 105, 105);
+    letter-spacing: 1px;
+    line-height: normal;
+    font-size: 1.3rem;
 }
 
-.hero h1 span:nth-child(2) {
-    text-transform: lowercase;
+/* ARE YOU READY */
+.header-text h3 {
+    user-select: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin: 30px 0;
+    color: var(--color2);
 }
 
-.hero h1::after {
-    position: absolute;
-    content: " ☀️";
-    font-size: 1.5rem;
-    /* Emoji soleil direct */
+/****** Règlements ******/
+.reglements,
+.inscriptions,
+.recompenses,
+.cantine,
+.resultats {
+    background: var(--white);
+    text-align: left;
+    margin: 20px;
+    padding: 30px 15px;
+    line-height: 2rem;
+    color: var(--color3);
+    font-family: var(--font2);
+    border: 2px solid var(--color1);
 }
 
-/* Animation de ligne 2026 */
-.line-container {
+/* Format de compétition, Règles du jeu */
+.reglements h3 {
+    padding: 20px 0 5px;
+}
+
+.reglements li {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
+    align-items: flex-start;
+    color: var(--black);
 }
 
-.line {
-    height: 2px;
-    background: var(--secondary-color);
-    flex-grow: 0;
-    width: 0;
-    animation: growLine 1.5s forwards ease-out;
+.reglements li::before {
+    content: "-";
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
-@keyframes growLine {
-    to {
-        width: 230px;
-    }
+.reglements p {
+    color: var(--black);
 }
 
-.year {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
+/****** Inscriptions ******/
+.inscriptions h2 {
+    padding: 0 0 20px;
 }
 
-.ready {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-top: 10px;
-    letter-spacing: 1.5px;
+.inscriptions h3 {
+    padding: 20px 0 5px;
 }
 
-/* PAGES CONTENU */
-main {
-    padding: 120px 10% 60px;
-    /* Padding haut pour la navbar fixe */
-    min-height: calc(100vh - 58px);
+.inscriptions li {
+    display: flex;
+    align-items: flex-start;
+    color: var(--black);
 }
 
-#img-recompenses {
-    margin: 0 auto;
-    max-height: 500px;
+.inscriptions li::before {
+    content: "-";
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.inscriptions p {
+    color: var(--black);
+    line-height: 50px;
+}
+
+/****** Récompenses ******/
+.recompenses {
+    background: url(./assets/img/back-header1.webp) right/cover;
+    color: var(--white);
+}
+
+.recompenses p {
+    color: var(--white);
+    line-height: 50px;
+}
+
+.recompenses img {
+    max-width: 90%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/****** Cantine ******/
+.grid-2 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.cantine h3 {
+    padding: 20px 0 5px;
+}
+
+.cantine h4 {
+    padding: 20px 0 5px;
+}
+
+.cantine li {
+    display: flex;
+    align-items: flex-start;
+    color: var(--black);
+}
+
+.cantine li::before {
+    content: "-";
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.cantine img {
+    max-width: 90%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/****** Résultats ******/
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.grid-3 div {
+    place-items: center;
+}
+
+.resultats {
+    background: url(./assets/img/back-header1.webp) center/cover;
+    color: var(--white);
+}
+
+.resultats h2 {
+    color: var(--white);
+    letter-spacing: 2px;
+
+}
+
+.resultats h3 {
+    padding: 20px 0 20px;
+    color: var(--white);
+    letter-spacing: 2px;
 }
 
 /* Tableaux */
 table {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
     background: white;
     margin-bottom: 10px;
+}
+
+tbody {
+    background: var(--color4);
+
 }
 
 table th,
@@ -220,24 +334,23 @@ table td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     text-align: left;
+    margin: 0 auto;
+    align-items: center;
 }
 
-/* Grid Cantine & Résultats */
-.grid-2 {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    gap: 40px;
-    align-items: start;
+/* Footer */
+footer {
+    height: 58px;
+    background: var(--color3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
 }
 
-#img-cantine {
-    max-width: 90%;
-    margin: 50px auto;
-}
-
-
-/* RESPONSIVE < 768px */
-@media (max-width: 840px) {
+/* RESPONSIVE < 850px */
+@media (max-width: 850px) {
     .menu-toggle {
         display: block;
     }
@@ -245,9 +358,9 @@ table td {
     .nav-links {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 70px;
         flex-direction: column;
-        background: var(--primary-color);
+        background: var(--color4);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -275,58 +388,70 @@ table td {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Accueil Mobile */
-    .hero h1 {
-        position: relative;
-        font-size: 1.5rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero h1::after {
-        position: absolute;
-
-        content: " ☀️";
-        font-size: 1.2rem;
-        right: -20px;
-        top: -5%;
-        /* Emoji soleil direct */
-    }
-
-    .hero img {
-        width: 100px;
-    }
-
-    .year {
-        font-size: 1.4rem;
-    }
-
-    .ready {
-
-        font-size: 1.0rem;
-    }
-
-    @keyframes growLine {
-        to {
-            width: 50px;
-        }
-    }
-
+    /* Cantine */
     .grid-2 {
+        display: grid;
         grid-template-columns: 1fr;
     }
 
-    .grid-2 img {
-        margin: 0;
+    .cantine img {
+        max-width: 100%;
+        margin: 20px auto 0;
+        border-radius: 10px;
     }
 
-    #img-recompenses {
-        margin: 0 auto;
-        width: 90%;
+    /****** Résultats ******/
+    .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 690px) {
+
+
+    .header-text h1 {
+        font-size: 1.9rem;
     }
 
-    #img-cantine {
-        max-width: 90%;
-        margin: 0 auto;
+    .header-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .header-text p {
+        font-size: 0.9rem;
+    }
+
+    .header-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .recompenses p {
+        color: var(--white);
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .header-text p {
+        font-size: 0.8rem;
+    }
+
+    .header-text h3 {
+        font-size: 1rem;
+    }
+
+    .recompenses p {
+        color: var(--white);
+        line-height: 30px;
     }
 }
